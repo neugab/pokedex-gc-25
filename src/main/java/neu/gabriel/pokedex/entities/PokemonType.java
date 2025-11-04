@@ -22,3 +22,7 @@ public class PokemonType {
         FOGO
     }
 }
+
+
+
+/*CRIAR OS RELACIONAMENTOS* / TESTES / CRIAR SERVICES, REPOSITORIES, DTOS, CONFIGS*/
