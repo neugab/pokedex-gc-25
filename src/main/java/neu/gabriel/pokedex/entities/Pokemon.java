@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @RequiredArgsConstructor
@@ -17,12 +18,15 @@ public class Pokemon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "pokemon_id")
     private Long id;
+
     private String name;
 
-    private Set<PokemonType> type;
+    private Set<Type> type = new HashSet<>();
 
     private Float height;
+
     private Float weight;
 
 }
