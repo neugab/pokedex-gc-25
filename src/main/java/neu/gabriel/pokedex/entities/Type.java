@@ -23,7 +23,7 @@ public class Type {
     @ManyToMany
     private Set<Pokemon> pokemons;
 
-    enum TypeName{
+    public enum TypeName{
         AGUA,
         VENENOSO,
         FOGO,

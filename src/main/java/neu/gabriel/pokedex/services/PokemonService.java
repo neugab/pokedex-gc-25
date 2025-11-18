@@ -25,7 +25,6 @@ public class PokemonService {
         pokemon.setHeight(pokemonDTO.height());
         pokemon.setWeight(pokemonDTO.weight());
         pokemon.setType(new HashSet<>(types));
-
     }
 }
 
