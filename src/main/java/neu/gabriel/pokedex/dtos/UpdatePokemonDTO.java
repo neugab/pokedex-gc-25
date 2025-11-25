@@ -1,23 +1,20 @@
 package neu.gabriel.pokedex.dtos;
 
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 
 import java.util.Set;
 
-public record CreatePokemonDTO(
-        @NotBlank(message = "Nome é obrigatório")
+public record UpdatePokemonDTO(
         @Size(min = 2, max = 50, message = "Nome deve ter entre 2 e 50 caracteres")
         String name,
 
-        @NotNull(message = "Tipos são obrigatórios")
         @Size(min = 1, max = 2, message = "Pokémon deve ter entre 1 e 2 tipos")
         Set<Long> typeIds,
 
-        @NotNull(message = "Altura é obrigatória")
         @Positive(message = "Altura deve ser um valor positivo")
         Float height,
 
-        @NotNull(message = "Peso é obrigatório")
         @Positive(message = "Peso deve ser um valor positivo")
         Float weight,
 
